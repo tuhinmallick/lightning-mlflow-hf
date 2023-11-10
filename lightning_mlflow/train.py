@@ -163,7 +163,7 @@ if __name__ == "__main__":
     # Save model to ONNX format to the `onnx_path`.
     onnx_path = os.path.join(
         train_config.model_checkpoint_dir,
-        train_config.mlflow_run_name + "_model.onnx.pb",
+        f"{train_config.mlflow_run_name}_model.onnx.pb",
     )
     convert_to_onnx(
         model=trained_model,
